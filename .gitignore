@@ -105,3 +105,6 @@ dist
 
 #lol
 .unotes/
+#config
+payment.json
+config.json
