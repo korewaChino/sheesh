@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "typescript": "^4.2.4"
+  },
+  "name": "sheesh",
+  "description": "An open source scalping bot, so you can buy or mass buy your PS5s, GPUs or sneakers!",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korewaChino/sheesh.git"
+  },
+  "keywords": [
+    "scalper",
+    "bot",
+    "typescript"
+  ],
+  "author": "Cappy Ishihara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/korewaChino/sheesh/issues"
+  },
+  "homepage": "https://github.com/korewaChino/sheesh#readme"
+}
