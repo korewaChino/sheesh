@@ -1,4 +1,4 @@
-let payment: Array<String> = PaymentAddress = require('./payment.json')
+let payment: Array<String> = PaymentAddress = require('../payment.json')
 const Web = async (url, action) => {
 
 }
