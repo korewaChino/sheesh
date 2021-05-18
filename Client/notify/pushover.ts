@@ -5,7 +5,7 @@ const puush = new Push({
     token: (config && config.notification.pushover.pushoverApiKey) || '',
 });
 
-const pushover = async ({ title, message, url }) => puush.send(
+export const pushover = async ({ title, message, url }) => puush.send(
     {
       message,
       title,

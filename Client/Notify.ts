@@ -1,6 +1,6 @@
 const push = require('./notify/pushover');
 let settings = require('../config.json')
-const Notify = async ({ site, message }) => {
+export const Notify = async ({ site, message }) => {
     //notify
     const {
       url, description,

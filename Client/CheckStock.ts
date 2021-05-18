@@ -1,8 +1,8 @@
-const puppeteer = require('puppeteer');
+import * as puppeteer from 'puppeteer'
 const sites = require('../sites.json');
 let setting = require('../config.json')
 //i have no idea why this doesnt work
-const notify = require('./Notify')
+import {Notify} from './Notify'
 const {ms,s} = require('time-convert')
 let timeConverted = 1;
 let timeSeconds = 1
@@ -37,9 +37,9 @@ console.debug('we got through boys');
         return actual === expected;
       };
       
-      const checkSite = async (site, page) => {
+      export const checkSite = async (site, page) => {
         const {
-          url, xPath, expected, wait = timeSeconds, description,
+          url, xPath, expected, wait = 1, description,
         } = site;
         await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');
         console.debug('Browser Agent Set!')
@@ -52,11 +52,11 @@ console.debug('we got through boys');
       
           const value = String(text).replace(/^\s+|\s+$/g, '');
           if (!isMatch(value, expected)) {
-            await notify.Notify({ site, message: `${description} was expecting "${expected}" but got "${value}"` })
+            await Notify({ site, message: `${description} was expecting "${expected}" but got "${value}"` })
           }
         } catch (e) {
           if (setting && setting.notification.notifyOnNodeNotFound) {
-            await notify.Notify({ site, message: `${description}: Listing Missing or Out of Stock!` });
+            await Notify({ site, message: `${description}: Listing Missing or Out of Stock!` });
           }
         }
       };
