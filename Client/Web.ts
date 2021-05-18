@@ -1,6 +1,8 @@
 let payment: Array<String> = PaymentAddress = require('../payment.json')
-const Web = async (url, action) => {
 
+const Web = {
+    
 }
-
-exports.Web = Web;
+module.exports = {
+    Web
+}
